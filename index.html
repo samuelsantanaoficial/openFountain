@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roteirista Fountain</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0a66c2">
+</head>
+<body>
+  <header>
+    <button id="btn-new">Novo</button>
+    <button id="btn-open">Abrir</button>
+    <button id="btn-save">Salvar</button>
+    <button id="btn-toggle">Visualizar</button>
+    <button id="btn-production">Produção</button>
+    <button id="btn-pdf" class="primary">Exportar PDF</button>
+    <span id="status">Pronto</span>
+    <span class="spacer"></span>
+  </header>
+
+  <main>
+    <div id="editor-container">
+      <textarea id="editor" spellcheck="false" placeholder="Digite seu roteiro em Fountain aqui..."></textarea>
+    </div>
+    <div id="preview-container">
+      <div id="preview" class="screenplay"></div>
+    </div>
+    <div id="production-container">
+      <div class="production-header">
+        <nav class="tabs">
+          <button data-tab="locations" class="active">📍 Locações</button>
+          <button data-tab="characters">💬 Personagens</button>
+          <button data-tab="decupagem">🎬 Decupagem</button>
+        </nav>
+        <button id="btn-prod-export">Baixar .txt</button>
+      </div>
+      <div class="tab-panels">
+        <div id="tab-locations" class="tab-content active"></div>
+        <div id="tab-characters" class="tab-content"></div>
+        <div id="tab-decupagem" class="tab-content"></div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
